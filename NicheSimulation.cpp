@@ -83,7 +83,7 @@ int nicheSimulation(Parameters experimentParameters)
 	if (experimentParameters.n > 0 && experimentParameters.divisions > 0 && experimentParameters.p >= 0 && experimentParameters.r >= 0)
 	{
 
-		long double mutantProportion = experimentParameters.mutants / long double(experimentParameters.n);
+		long double mutantProportion = experimentParameters.mutants / (long double)experimentParameters.n;
 		//cout << "mutants:" << mutants << endl;
 
 		long double randomNumberBetween0and1 = rand01();
@@ -100,7 +100,7 @@ int nicheSimulation(Parameters experimentParameters)
 				//positive selection 
 				//extract a random cell
 				randomNumberBetween0and1 = rand01();
-				mutantProportion = (experimentParameters.mutants + 1) / long double(experimentParameters.n + 1);
+				mutantProportion = (experimentParameters.mutants + 1) / (long double) experimentParameters.n + 1;
 				if (randomNumberBetween0and1 < mutantProportion)
 				{
 					//cout << ".........mutant cell ejected" << endl;
@@ -213,12 +213,6 @@ int main()
 
 	printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
 	cout << "DONE" << endl;
-
-
-
-
-
-
 
 
 	return 0;

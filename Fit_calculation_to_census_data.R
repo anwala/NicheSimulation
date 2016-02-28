@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 ##Selective Mutation Accumulation: A Compuational Model of the Paternal Age Effect
 ##Eoin C Whelan*, Alexander C Nwala, Christopher Osgood, Stephan Olariu
 ##Old Dominion University Norfolk VA USA 
